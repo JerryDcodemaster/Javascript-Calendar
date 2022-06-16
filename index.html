@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calendar UI Design</title>
+</head>
+<body>
+    <div class="calendar">
+        <p id="monthName"></p>
+        <p id="dayName"></p>
+        <p id="dayNumber"></p>
+        <p id="year"></p>
+    </div>
+    
+    <script>
+        //navigator.keyword
+        const lang = navigator.language;
+        let date = new Date();
+
+        let dayNumber = date.getDate();
+        let month = date.getMonth();
+        let dayName = date.toLocaleString(lang,{weekday: 'short'})
+        let monthName = date.toLocaleString(lang,{month: 'long'})
+        let year = date.getFullYear()
+
+        document.getElementById('monthName').innerHTML = monthName;
+        document.getElementById('dayName').innerHTML = dayName;
+        document.getElementById('dayNumber').innerHTML = dayNumber;
+        document.getElementById('year').innerHTML = year;
+
+
+
+        //testing switch
+        // let day;
+        // switch(new Date().getDay()) {
+        //     case 0:
+        //         day = "Sunday";
+        //         break;
+        //     case 1:
+        //         day = "Monday";
+        //         break;
+        //     case 2:
+        //         day = "Tuesday";
+        //         break;
+        //     case 3:
+        //         day = "Wednesday";
+        //         break;
+        //     case 4:
+        //         day = "Thursday";
+        //         break;
+        //     case 5:
+        //         day = "Friday";
+        //         break;
+        //     case 6:
+        //         day = "Saturday";
+        //         break;
+        // }
+        // console.log(day);
+
+        //another example of switch statement
+        // var Animal = 'Giraffe';
+        // switch (Animal) {
+        //     case 'Cow':
+        //     case 'Giraffe':
+        //     case 'Dog':
+        //     case 'Pig':
+        //         console.log('This animal will go on Noah\'s Ark');
+        //         break;
+        //     case 'Spoon':
+        //         console.log('A spoon is not an animal');
+        //         break;
+        //     case 'Dinasour':
+        //         default:
+        //             console.log('This animal will not be on the Ark');        
+        // } 
+
+        //Ternary Operator 
+        
+        //what it looks like using if and else statement
+        // var age = 15;
+        
+        // if(age >= 18) {
+        //     console.log("You are an adult");
+        // } else {
+        //     console.log("You are a kid");
+        // };
+
+        //using ternary operator method
+        // console.log((age >= 18) ? "You are an adult!" : "You are a kid.");
+
+        //if u have more than one operation per case, you can seperate them using comma
+        // var stop;
+
+        // age > 18 ? (
+        //     console.log("OK, you can go"),
+        //     stop = false
+        // ) : (
+        //     console.log("Sorry, you are much too young"),
+        //     stop = true
+        // );
+
+        //You can have multiple ternary operation inside one ternary operation
+        // var firstCheck = false,
+        //     secondCheck = false,
+        //     access = firstCheck ? "Access denied" : secondCheck ? "Access denied" : "Access granted";
+            
+        //     console.log(access);
+        </script>
+</body>
+</html>
